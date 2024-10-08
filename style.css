@@ -6,51 +6,30 @@ body {
   background-color: #333;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
 }
-
-.search {
-  position: relative;
-  height: 50px;
-}
-
-.search .input {
-  background-color: #fff;
-  border: 0;
-  font-size: 18px;
-  padding: 15px;
-  width: 50px;
-  height: 50px;
-  transition: width 0.3s ease;
-}
-
-.btn {
-  background-color: #fff;
-  border: 0;
-  cursor: pointer;
-  font-size: 24px;
+.bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 50px;
-  width: 50px;
-  transition: transform 0.3s ease;
+  top: -30px;
+  left: -30px;
+  width: calc(100% + 60px);
+  height: calc(100% + 60px);
+  background: url('https://images.unsplash.com/photo-1698352916205-b14685c3657c')
+    no-repeat center center/cover;
+  z-index: -1;
+  filter: blur(70px);
 }
 
-.btn:focus,
-.input:focus {
-  outline: none;
-}
-
-.search.active .input {
-  width: 200px;
-}
-
-.search.active .btn {
-  transform: translateX(198px);
+.loading-text {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
